@@ -1,10 +1,11 @@
-const fileManager = require('./fileManager')
-const readlineSync = require('readline-sync')
-const path = require ('path')
-
+import fileManager from './fileManager.js';
+import readlineSync from 'readline-sync';
+import path from 'path';
+import url, { fileURLToPath } from 'url';
 
 //async é usado pois há uma promise (fileMessage) e quando usamos await na promisse temos que tornar a função mãe dela asyncrona. 
 async function main() {
+    const __dirname =path.dirname(fileURLToPath(import.meta.url))
     const baseDir = path.join(__dirname, "my_files");//com o dirnaame aqui os arquivos vão pra dentro de My-files
     fileManager.createDirectory(baseDir)
 

@@ -1,7 +1,7 @@
 //Importando bibliotecas nativas do node. 
 //Forma de infortação chamada de CommonJS
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs';
+import path from 'path';
 
 
 //Promise é uma "bibllioteca que cria assincronismo"
@@ -97,5 +97,4 @@ function deleteFile(filePath){
 
 
 
-
-module.exports= {createDirectory, createFile, listFile, readFile, writeFile, deleteFile}
+export default {createDirectory, createFile, listFile, readFile, writeFile, deleteFile}
